@@ -19,17 +19,16 @@ const removeHighScores = function(array){
 };
 //Remove any scores that are 0 or below.
 const aboveZero = function(array){
-    let tempArr = arr2.filter(function(num){
+    let tempArr = array.filter(function(num){
         return num > 0;
     });
     return tempArr;
 };
 //Sum the scores.
 const totalScores = function(array){
-    let sumScores = arr3.reduce(function(prev, next){
+    return array.reduce(function(prev, next){
         return prev += next;
     }, 0);
-    return sumScores;
 };
 //Provide a count for the number of scores still remaining.
 const numOfScores = function(arr){
@@ -41,4 +40,9 @@ let arr2 = removeHighScores(arr1);
 let arr3 = aboveZero(arr2);
 let total = totalScores(arr3);
 let numberOfScores = numOfScores(arr3);
+
+console.log(scores);
+console.log(arr3);
+console.log(total);
+console.log(numberOfScores);
 
