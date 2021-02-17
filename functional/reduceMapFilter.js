@@ -1,25 +1,19 @@
 const array = [10, 0, 90, 80, 50, 0, 60];
 
 //Create a function that will take the array and a student id (any number you want) as parameters. Use map to create a new array that stores each score in an object that includes the activity ID (first score is 0, second score 1, etc.) as well as the student ID. 
-let newArray = function(arr, id){
-    let arrayOfObjects = arr.map(function (score){
+let newArray = (arr, id) => {
+    return arr.map(score => {
         return {
             id: [id],
             score: score
         };
     });
-    return arrayOfObjects;
 };
 
 //Create a function that will create a new array with the lowest score removed. (For this exercise if both 0s are removed that is OK.)
 
 // create array of scores function
-let arrayOfScores = function(arr){
-    let scores = arr.map(function(obj){
-        return obj.score;
-    });
-    return scores;
-};
+let arrayOfScores = arr => arr.map(obj => obj.score);
 
     // Did in two steps: sort array first, then remove lowest
 let sortArray = function (arr){
@@ -33,14 +27,9 @@ let removeLowest = function(arr){
 };
 
 //Create a function that will Sum the scores.
-let sumScores = function (arr){
-    arr.map(function(obj){
-        return obj.score;
-    }).reduce(function(a,b){
-        return a += b;
-    });
-}; 
+let sumScores = arr => arr.reduce((a,b) => a += b);
 
+console.log(sumScores(array));
 //Create a function that will compute the average from an array passed in.
 let average = function(arr){
     let total = arr.reduce(function(a,b){
