@@ -2,14 +2,11 @@ const scores = [50, 6, 100, 0, 10, 75, 8, 60, 90, 80, 0, 30, 110];
 
 //Any scores that are below 10 needs to be multiplied by 10 and the new value included.
 const multiplyByTen = function(array){
-    let tempArr = array.map(function(num){
-        if (num < 10){
-            return num *10;
-        }
-        return num;
+    return array.map(function(num){
+        return num < 10 ? num * 10 : num;
     });
-    return tempArr;
 };
+
 //Remove any scores that are over 100.
 const removeHighScores = function(array){
     let lessThan100 = array.filter(function(num){
