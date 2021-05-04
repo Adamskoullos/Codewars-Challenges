@@ -28,5 +28,3 @@ function addTogether(...arg) {
   console.log(addTogether(10, [1,2,3]));
   console.log(addTogether("http://bit.ly/IqT6zt"));
   console.log(addTogether(10, '3'));
-
-
