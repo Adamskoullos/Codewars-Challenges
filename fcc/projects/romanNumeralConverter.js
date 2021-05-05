@@ -1,12 +1,12 @@
 function convertToRoman(num) {
-    const numArr1 = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1]
+    const buildingBlocks = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1]
     const numArr = []
     let tempArr = []
     const romanNum = []
   
-    const converter = (num) => {
+    const createNumArr = (num) => {
       if(num > 0){
-        numArr1.forEach(decNum => {
+        buildingBlocks.forEach(decNum => {
           if(decNum <= num){
             tempArr.push(decNum)
           }
@@ -15,10 +15,10 @@ function convertToRoman(num) {
         num = num - tempArr[0]
         tempArr = []
         
-        converter(num)
+        createNumArr(num)
       }
     }
-    converter(num)
+    createNumArr(num)
   
     numArr.forEach(number => {
         if(number == 1000){romanNum.push('M')}
