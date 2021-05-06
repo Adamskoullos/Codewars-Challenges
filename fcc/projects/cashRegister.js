@@ -10,7 +10,7 @@ function checkCashRegister(price, cash, cid) {
     { name: "NICKEL", val: 0.05 },
     { name: "PENNY", val: 0.01 }
   ]
-
+  const change = cid.map(i=>i) // To return when changeDue == total Available 
   const sortedArr = cid.reverse() // Order highest first 
   const cashTill = sortedArr.map(arr =>{ // create array to track the change of value for each bill/coin available for change
     return arr
@@ -21,13 +21,16 @@ function checkCashRegister(price, cash, cid) {
   // Calculate and return the two basic outcomes--------------------------------------------
   const changeArr = sortedArr.map(arr => arr[1])
   const totalAvailable = changeArr.reduce((a,b) => a+b)
+  // console.log(totalAvailable)
+  // console.log(changeDue)
 
   if(totalAvailable < changeDue){
     return {status: "INSUFFICIENT_FUNDS", change: []}
   }
 
   if(totalAvailable == changeDue){
-    return {status: "CLOSED", change: cid}
+    console.log('Closed', change)
+    return {status: "CLOSED", change: change}
   }
   // ---------------------------------------------------------------------------------------
   // Main Logic for calculating change
@@ -51,7 +54,7 @@ function checkCashRegister(price, cash, cid) {
         }
       })
     }
-
+  if(tempArr.length){
     let array = Object.values(tempArr[0]) // Now tempArr[0].value is to be added to finalArr ------------
    
 // If array[0] bill/coin type exists in finalArr
@@ -94,13 +97,12 @@ function checkCashRegister(price, cash, cid) {
         converter()
       }
     }
-    
   }
-  
+  }
   converter(changeDue)
   console.log('finshed', finalArr)
+  if(changeDue > 0){return {status: "INSUFFICIENT_FUNDS", change: []}}
   return {status: "OPEN", change: finalArr}
-  
 }
 
 checkCashRegister(19.5, 20, [["PENNY", 0.01], ["NICKEL", 0], ["DIME", 0], ["QUARTER", 0], ["ONE", 1], ["FIVE", 0], ["TEN", 0], ["TWENTY", 0], ["ONE HUNDRED", 0]]);
