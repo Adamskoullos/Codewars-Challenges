@@ -1,11 +1,11 @@
-var Person = function(firstAndLast) {
-    // Only change code below this line
+const Person = function(firstAndLast) {
+    
     let fullName = firstAndLast
     
     let firstName = firstAndLast.split(' ')[0]
     
     let lastName = firstAndLast.split(' ')[1]
-    // Complete the method below and implement the others similarly
+    
     this.getFullName = () => {
       return fullName;
     };
@@ -42,3 +42,7 @@ var Person = function(firstAndLast) {
   bob.setFullName("Haskell Curry");
   console.log(bob.getFullName());
   console.log(bob.getFirstName());
+  console.log(bob.firstName)
+
+
+
