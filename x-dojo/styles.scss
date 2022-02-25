@@ -4,13 +4,13 @@
 }
 
 h1 {
-  color: #616161;
+  color: #d4d4d4;
 }
 
 header {
   height: 10vh;
-  background: #e2e2e2;
-  box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(#7633c2, #ab70ee);
+  box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.6);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,10 +21,13 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  h1 {
+    color: #636363;
+  }
 }
 
 footer {
   height: 10vh;
-  background: #e2e2e2;
-  box-shadow: 2px -3px 5px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(#ab70ee, #7633c2);
+  box-shadow: 1px -2px 8px rgba(0, 0, 0, 0.5);
 }
