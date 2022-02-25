@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: #616161;
+}
+
+header {
+  height: 10vh;
+  background: #e2e2e2;
+  box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#dojo-section .container {
+  height: 80vh;
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+  height: 10vh;
+  background: #e2e2e2;
+  box-shadow: 2px -3px 5px rgba(0, 0, 0, 0.3);
+}/*# sourceMappingURL=styles.css.map */
