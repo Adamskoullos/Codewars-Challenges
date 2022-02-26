@@ -1,6 +1,8 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-family: monospace;
 }
 
 h1 {
@@ -31,3 +33,64 @@ footer {
   background: linear-gradient(#ab70ee, #7633c2);
   box-shadow: 1px -2px 8px rgba(0, 0, 0, 0.5);
 }
+// >>>>>>>>>>>>>>>>>>>>>>>>> Grid >>>>>>>>>>>>>>>>>>>>>>>>>>
+
+// header {
+//   height: 10vh;
+//   background: linear-gradient(#7633c2, #ab70ee);
+//   box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.6);
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+// footer {
+//   height: 10vh;
+//   background: linear-gradient(#ab70ee, #7633c2);
+//   box-shadow: 1px -2px 8px rgba(0, 0, 0, 0.5);
+// }
+
+// .grid-container {
+//   height: 80vh;
+//   display: grid;
+//   grid-template-columns: repeat(6, 1fr);
+//   gap: 5px;
+//   grid-template-areas:
+//     "main main main main aside aside"
+//     "main main main main aside aside"
+//     "main main main main aside aside"
+//     "main main main main aside aside"
+//     "main main main main aside aside"
+//     "main main main main aside aside";
+//   & > * {
+//     // background: rgb(138, 209, 117);
+//     padding: 20px;
+//   }
+//   main {
+//     grid-area: main;
+//     overflow: auto;
+//     section {
+//       height: 100%;
+//       display: grid;
+//       grid-template-columns: repeat(1, 1fr);
+//       grid-auto-rows: minmax(300px, auto);
+//       gap: 20px;
+//       div {
+//         background: rgba(100, 148, 237, 0.418);
+//         padding: 20px;
+//         box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3);
+//         border-radius: 8px;
+//         transition: all 0.3s;
+//         &:hover {
+//           background: rgba(100, 148, 237, 0.527);
+//           transform: scale(1.005);
+//           box-shadow: 1px 3px 4px rgba(0, 0, 0, 0.4);
+//           transition: all 0.3s;
+//         }
+//       }
+//     }
+//   }
+//   aside {
+//     grid-area: aside;
+//   }
+// }
