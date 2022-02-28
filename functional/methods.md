@@ -69,8 +69,57 @@ const flatArray = nestedArray.flat(Infinity);
 
 #### reduce
 
+Total:
+
 ```js
-// code
+const numbers = [175, 50, 25, 33];
+
+const result = numbers.reduce((total, num) => total + num, 0);
+```
+
+Group By:
+
+```js
+const people = [
+  { name: "dave", age: 20 },
+  { name: "don", age: 20 },
+  { name: "derek", age: 35 },
+  { name: "dell", age: 35 },
+  { name: "dan", age: 30 },
+];
+
+const result = people.reduce((groupedByAge, person) => {
+  const age = person.age;
+  if (!groupedByAge[age]) groupedByAge[age] = [];
+  groupedByAge[age].push(person);
+  return groupedByAge;
+}, {});
+/*
+{
+  20: [{ name: "dave", age: 20 },{ name: "don", age: 20 }],
+  30: [{ name: "dan", age: 30 }],
+  35: [{ name: "derek", age: 35 },{ name: "dell", age: 35 }]
+}
+*/
+```
+
+Average:
+
+```js
+const allScores = [
+  [1, 6, 2, 8, 8, 3, 9, 7],
+  [1, 6, 5, 8, 3, 3, 9, 7],
+  [1, 6, 39, 8, 6, 3, 9, 7],
+  [1, 6, 98, 9, 3, 9, 7],
+  [1, 6, 38, 2, 3, 9, 7],
+];
+
+const averageScoresArr = allScores.reduce((averageScores, scores) => {
+  let total = scores.reduce((total, score) => total + score, 0);
+  averageScores.push(parseInt(total / scores.length));
+  return averageScores;
+}, []);
+// [5, 5, 9, 19, 9]
 ```
 
 #### slice
