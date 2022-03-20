@@ -33,6 +33,19 @@ footer {
   background: linear-gradient(#ab70ee, #7633c2);
   box-shadow: 1px -2px 8px rgba(0, 0, 0, 0.5);
 }
+
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .boxes {
+    display: flex;
+    margin: 20px;
+    .box {
+      width: 20px;
+    }
+  }
+}
 // >>>>>>>>>>>>>>>>>>>>>>>>> Grid >>>>>>>>>>>>>>>>>>>>>>>>>>
 
 // header {
